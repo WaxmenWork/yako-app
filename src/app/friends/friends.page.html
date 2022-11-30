@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text">Друзья</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab5"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/notice"><ion-icon name="notifications"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="fndcont">
+    <input type="text" class="find" [(ngModel)]="findName">
+    <ion-button class="confbut" color="secondary" (click)="findUser()"><ion-icon name="search"></ion-icon></ion-button>
+  </div>
+  <div class="maincont">
+    <p class="section__title">Найденные пользователи:</p>
+    <div class="profilescontent">
+      <div class="userblock" lines="none" *ngFor="let user of foundUser; let i = index">
+        <ion-button fill="clear" color="{{colorb}}" class="addFriend" (click)="friendReq(i)"></ion-button>
+        <div class="profileimg" [ngStyle]="imgurl[i]">
+          <p class="name">
+            {{user.username}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <p class="section__title">Ваши друзья</p>
+    <div class="profilescontent">
+      <div class="userblock" lines="none" *ngFor="let friend of yourFriends; let i = index">
+        <ion-button fill="clear" color="light" class="addFriend" (click)="showProfile(i)" [routerLink]="['/profile', yourFriends[i].id]"></ion-button>
+        <div class="profileimg"[ngStyle]="imgurlfr[i]">
+          <p class="name">
+            {{friend.username}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,17 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
+    <ion-title class="text">
+      Водный баланс
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container" >
+    <div class="bottleflipchallenge" >
+      <p class="btltext1">Ваша цель - {{needValue}}мл</p>
+      <div class="bowl">
+        <div id="banner" >
+          <div class="fill" [ngStyle]="st">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                <path fill="#04ACFF" id="waveShape" d="M300,300V2.5c0,0-0.6-0.1-1.1-0.1c0,0-25.5-2.3-40.5-2.4c-15,0-40.6,2.4-40.6,2.4
+            c-12.3,1.1-30.3,1.8-31.9,1.9c-2-0.1-19.7-0.8-32-1.9c0,0-25.8-2.3-40.8-2.4c-15,0-40.8,2.4-40.8,2.4c-12.3,1.1-30.4,1.8-32,1.9
+            c-2-0.1-20-0.8-32.2-1.9c0,0-3.1-0.3-8.1-0.7V300H300z"/>
+              </svg>
+          </div>
+        </div>
+      </div>
+      <p class="btltext">{{ml}}ml - {{n}}%</p>
+      <ion-button class="newwater" fill="solid" color="light" (click)="changeValue()"><ion-icon name="beaker"></ion-icon></ion-button>
+      <ion-button class="addwater" fill="clear" color="light" (click)="addWater()"></ion-button>
+    </div>
+    <p class="section__title">История</p>
+    <div class="history">
+      <div class="hstcnt" *ngFor="let history of historyOfDrinks; let i = index">
+        <div class="frstbl">
+          <p class="btltext">{{history.title}}</p>
+          <p class="btmbtltext">{{history.description}}</p>
+        </div>
+        <div class="secbl"><p class="scbtltext">{{history.volume}}мл</p></div>
+        <ion-button class="deletecnt" color="danger" (click)="deleteHistory(history.id, i)">X</ion-button>
+      </div>
+    </div>
+  </div>
+  
+  
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>

@@ -1,0 +1,54 @@
+.body {
+    width: 100%;
+    height: 100%;
+}
+
+.training_image {
+    width: 100%;
+    height: 200px;
+}
+
+.gyms_row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.gym_confirm {
+    width: 3em;
+    height: 2.5em;
+}
+
+.gym_index {
+    margin-right: 5px;
+}
+
+.gym_title {
+    width: 100%;
+}
+
+.gym_calories {
+    flex: 2;
+}
+
+a {
+    text-decoration: none;
+    color: var(--ion-color-dark);
+}
+
+.training_desc {
+
+}
+.minutes {
+    position: relative;
+    right: 30px;
+}
+
+.gym_img {
+    min-height: 150px;
+    max-height: 300px;
+    width: 100%;
+    margin-bottom: 10px;
+}

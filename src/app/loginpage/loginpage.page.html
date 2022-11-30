@@ -1,0 +1,27 @@
+<ion-header [translucent]="true" collapse="condense">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <p class="text">Авторизация</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="logForm">
+    <div class="list">
+      <ion-item *ngFor="let user of users">{{user.username}} - {{user.date}}</ion-item>
+      <ion-item color="secondary">
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input required="true" autofocus="true" type="email" inputmode="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item color="secondary">
+        <ion-label position="floating">Пароль</ion-label>
+        <ion-input required="true" type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+      <ion-button type="button" (click)="logging()">Войти</ion-button>
+    </div>
+  </div>
+</ion-content>

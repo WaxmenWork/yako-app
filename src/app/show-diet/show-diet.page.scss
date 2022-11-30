@@ -1,0 +1,34 @@
+.diet_image {
+    width: 100%;
+    height: 200px;
+}
+
+.food_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.food_confirm {
+    width: 3em;
+    height: 2.5em;
+}
+
+.food_index {
+    margin-right: 5px;
+}
+
+.food_title {
+    flex: 4;
+}
+
+.food_calories {
+    flex: 2;
+}
+
+a {
+    text-decoration: none;
+    color: var(--ion-color-dark);
+}

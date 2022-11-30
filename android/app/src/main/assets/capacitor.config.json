@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Yako",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

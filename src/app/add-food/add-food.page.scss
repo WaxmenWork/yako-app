@@ -1,0 +1,102 @@
+.container__ {
+    margin: 0 auto;
+    max-width: 390px;
+    padding: 0px 20px;
+  }
+
+.section__title {
+    color: var(--ion-color-dark);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+.input_name {
+    margin-top: 20px;
+    border: 1px solid lightgray;
+}
+
+.imginp{
+    width: 100%;
+    height:100%;
+    opacity:0;
+}
+
+.add_photo_block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.add_photo {
+    margin-left: 30px;
+    width: 9.8em;
+    height: 9.8em;
+    border-radius: 5px;
+    --background: lightgray url('../../../resources/+.svg') no-repeat center/3em;
+    box-shadow: 0px 4px 25px 10px #0000001A;
+    margin-bottom: 15px;
+}
+
+.inactive_text {
+    color:lightgray;
+}
+
+.ingridiends__inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.first_inputs {
+    width: 49%;
+    padding: 2px;
+}
+
+.second_inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 51%;
+    padding: 2px;
+}
+
+.real_inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ingridient_input {
+    border: 1px solid lightgray;
+}
+
+.small_input {
+    max-width: 32%;
+    border: 1px solid lightgray;
+}
+
+.add_ingridient {
+    width: 100%;
+    height: 3.1em;
+    --background: url('../../../resources/+.svg') no-repeat center/3em;
+    --box-shadow: 0;
+    margin-bottom: 10px;
+}
+
+ion-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-footer ion-button {
+    width:100%;
+    height: 2.5em;
+    font-size: 18px;
+    --background: var(--ion-color-secondary);
+    --color: white;
+}

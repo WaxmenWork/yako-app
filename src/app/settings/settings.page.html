@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text">Настройки</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab5"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="maincont">
+    <div class="allstats">
+      <div class="buttonprofile">
+        <ion-title class="buttonsprofile" color="white">Имя</ion-title>
+        <input type="text" class="statsprofile" placeholder="Введите новое имя" [(ngModel)]="name">
+      </div>
+      <div class="buttonprofile">
+        <ion-title required="true" class="buttonsprofile" color="white">E-Mail</ion-title>
+        <input type="text" class="statsprofile" placeholder="Введите новую почту" [(ngModel)]="email">
+      </div>
+      <div class="buttonprofile">
+        <ion-title class="buttonsprofile" color="white">Рост</ion-title>
+        <input type="text" class="statsprofile" placeholder="Введите новый рост" [(ngModel)]="height">
+      </div>
+      <div class="buttonprofile">
+        <ion-title class="buttonsprofile" color="white">Вес</ion-title>
+        <input type="text" class="statsprofile" placeholder="Введите новый вес" [(ngModel)]="weight">
+      </div>
+      <div class="buttonprofile">
+        <ion-select interface="popover" placeholder="Назначение" [(ngModel)]="category_id">
+          <ion-select-option value="easy">Набрать вес</ion-select-option>
+          <ion-select-option value="normal">Поддержание формы</ion-select-option>
+          <ion-select-option value="hard">Сбросить вес</ion-select-option>
+        </ion-select>
+      </div>
+    </div>
+    <ion-button class="confbut" color="white" (click)="confirmData()">Подтвердить</ion-button>
+  </div>
+</ion-content>

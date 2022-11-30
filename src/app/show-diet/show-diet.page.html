@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="primary">{{title}}</ion-title>
+    <ion-title slot="end">{{caloriesAll}} ккал</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <body>
+    <div class="diet_image" [ngStyle]="imgurl"></div>
+    <ion-list>
+      <ion-item>
+        <ion-label>Описание: {{description}}</ion-label>
+      </ion-item>
+      <ion-item *ngFor="let item of food; let i = index">
+        <div class="food_row">
+          <ion-label class="food_index"><a href="{{item.reciept}}" target="_blank">{{i+1}}</a></ion-label>
+          <ion-label class="food_title"><a href="{{item.reciept}}" target="_blank">{{item.title}}</a></ion-label>
+          <ion-label class="food_calories"><a href="{{item.reciept}}" target="_blank">{{item.calories}} ккал</a></ion-label>
+          <ion-button (click)="eat(item.id, i)" color="{{btnStatuses[i]}}" class="food_confirm"></ion-button>
+        </div>
+      </ion-item>
+    </ion-list>
+  </body>
+</ion-content>

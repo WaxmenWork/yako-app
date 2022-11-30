@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavController, NavParams } from '@ionic/angular';
+import { Storage } from '@ionic/storage-angular'
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +10,8 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor() {
+    
+  }
 
 }

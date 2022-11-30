@@ -1,0 +1,23 @@
+ion-slides {
+    height: 100%;
+}
+
+.regForm {
+    background-color: var(--ion-color-secondary);
+}
+
+ion-input {
+    margin: 0 auto;
+}
+
+.list ion-item {
+    position: relative;
+}
+
+ion-button {
+    margin-top: 200px;
+    font-size: 90%;
+    font-weight: 600;
+    width: 90%;
+    color: var(--ion-color-primary-contrast);
+}

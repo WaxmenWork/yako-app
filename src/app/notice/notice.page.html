@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text">Уведомления</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/friends"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="maincont">
+    <div class="notice" *ngFor="let notice of notises; let i = index">
+      <div class="noticeinfo">
+        <div class="img" [ngStyle]="imgurl[i]"></div> <p>Пользователь {{notice.username}} хочет с тобой подружиться!</p>
+      </div>
+      <div class="butcont">
+        <ion-button class="buttonsprofile" color="success" (click)="agree(i)"><ion-icon name="checkmark"></ion-icon></ion-button>
+        <ion-button class="buttonsprofile" color="danger" (click)="disAgree(i)"><ion-icon name="close"></ion-icon></ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

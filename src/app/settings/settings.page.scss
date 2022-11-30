@@ -1,0 +1,62 @@
+* {
+    margin: 0 auto;
+}
+
+.maincont{
+    max-width:430px;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.allstats{
+    display:flex;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    height:90%;
+}
+
+.confbut {
+    width:100%;
+    background-color: var(--ion-color-secondary);
+}
+
+.buttonprofile{
+    margin-top:20px;
+    min-width: 350px;
+    display:flex;
+    flex-direction:row;
+}
+
+.buttonsprofile{
+    text-align: center;
+    font-size: 15px;
+    text-transform: none;
+    border-radius: 5px;
+    color: var(--ion-color-dark);
+    --box-shadow: 0;
+}
+
+.statsprofile{
+    height: 30px;
+    font-size: 15px;
+    text-transform: none;
+    border-radius: 5px;
+    color: var(--ion-color-dark);
+    --box-shadow: 0;
+    border: 0px;
+}
+
+.stats{
+    width: 320px;
+    height: 250px;
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.img {
+    width:100px;
+    height:100px;
+}

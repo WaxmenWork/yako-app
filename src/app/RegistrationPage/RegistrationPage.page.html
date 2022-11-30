@@ -1,0 +1,54 @@
+<ion-header [translucent]="true" collapse="condense">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <p class="text">Регистрация</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-slides class="regForm" pager="true" [options]="slideOpts" #slides>
+    <ion-slide>
+      <div class="list">
+        <ion-item color="secondary">
+          <ion-label position="floating">Имя пользователя</ion-label>
+          <ion-input required="true" autofocus="true" [(ngModel)]="username"></ion-input>
+        </ion-item>
+        <ion-item color="secondary">
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input required="true" type="email" inputmode="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item color="secondary">
+          <ion-label position="floating">Пароль</ion-label>
+          <ion-input required="true" type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+        <ion-button type="button" (click)="next()">Далее</ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="list">
+        <ion-item color="secondary">
+          <ion-label position="floating">Дата рождения</ion-label>
+          <ion-input required="true" autofocus="true" [(ngModel)]="date"></ion-input>
+        </ion-item>
+        <ion-item color="secondary">
+          <ion-label position="floating">Вес</ion-label>
+          <ion-input required="true" inputmode="numeric" [(ngModel)]="weight"></ion-input>
+        </ion-item>
+        <ion-item color="secondary">
+          <ion-label position="floating">Рост</ion-label>
+          <ion-input required="true" inputmode="numeric" [(ngModel)]="height"></ion-input>
+        </ion-item>
+        <ion-select interface="popover" placeholder="Назначение" [(ngModel)]="category_id">
+          <ion-select-option value="easy">Набрать вес</ion-select-option>
+          <ion-select-option value="normal">Поддержание формы</ion-select-option>
+          <ion-select-option value="hard">Сбросить вес</ion-select-option>
+        </ion-select>
+        <ion-button  type="button" (click)="register()">Зарегистрироваться</ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

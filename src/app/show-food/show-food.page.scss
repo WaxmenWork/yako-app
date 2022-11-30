@@ -1,0 +1,27 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+.centralCol {
+    text-align: center;
+}
+table {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+table tr {
+    border: 1px solid var(--ion-color-dark);
+}
+table td {
+    border: 1px solid var(--ion-color-dark);
+    padding: 10px;
+}
+table th {
+    border: 1px solid var(--ion-color-dark);
+}
+.food_buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

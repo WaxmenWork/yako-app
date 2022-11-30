@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="text">
+      Профиль
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main">
+    <p class="section__title">{{username}}</p>
+    <div class="profileicon" [ngStyle]="imgurl">
+      <input type="file" (change)="selectedFile($event)" class="imginput">
+      <div class="img">
+        
+      </div>
+    </div>
+    <div class="buttonprofile">
+      <ion-button class="buttonsprofile" color="white" [routerLink]="['../../friends']">Друзья</ion-button>
+      <ion-button class="buttonsprofile" color="white" [routerLink]="['../../settings']">Настройки</ion-button>
+      <ion-button (click)="logout()" class="buttonsprofile" color="white">Выход</ion-button>
+    </div>
+  </div>
+</ion-content>

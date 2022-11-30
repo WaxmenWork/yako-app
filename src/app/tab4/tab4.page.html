@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="text">
+      Тренировки
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container__">
+    <div class="user_training">
+      <p class="section__title">Ваши тренировки</p>
+      <div class="training__content">
+        <div class="training__block" *ngFor="let trainingUserItem of trainingUserItems; let i = index;">
+          <div [routerLink]="['../../show-training/', trainingUserItem.id]" class="training_img" [ngStyle]="imgurlUSER[i]">
+            <p class="training_text">
+              {{trainingUserItem.title}}
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="section__title">Новые тренировки</p>
+      <div class="rec__content">
+        <div class="rec__block" *ngFor="let trainingItem of trainingItems; let i = index">
+          <div [routerLink]="['../../show-training/', trainingItem.id]" class="training_img" [ngStyle]="imgurlREC[i]">
+            <p class="training_text">
+              {{trainingItem.title}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

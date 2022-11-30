@@ -1,17 +1,65 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-nav>
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title class="text">
+        Активность
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-content [fullscreen]="true">
+    <div class="container__">
+      <div class="calcs">
+        <p class="section__title">Расчёты</p>
+        <div class="calcs__block">
+          <div class="calcs__content">
+            <div class="circle-wrap">
+              <div class="box" style="--p:{{circledata}}"></div>
+              <div class="wrap-mask">
+                <div class="calory_block">
+                  <p>Ккал</p>
+                  <p>{{circledata_cur}}/{{caloriesInDay}}</p>
+                </div>
+              </div>
+              <div class="mask"></div>
+            </div>
+            <div class="small_bars">
+              <div class="bar_indicator">
+                <div class="bar" style="--d:{{fats}}%">Жиры</div>
+                <div class="how_much">{{fats_cur}}/{{fatsInDay}}</div>
+              </div>
+              <div class="bar_indicator">
+                <div class="bar" style="--d:{{protein}}%">Белки</div>
+                <div class="how_much">{{protein_cur}}/{{proteinsInDay}}</div>
+              </div>
+              <div class="bar_indicator">
+                <div class="bar" style="--d:{{crbd}}%">Углеводы</div>
+                <div class="how_much">{{crbd_cur}}/{{carbohydratesInDay}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <p class="section__title">Достижения</p>
+        <div class="achivements__content">
+          <div class="achivements__block">
+
+          </div>
+          <div class="achivements__block">
+
+          </div>
+        </div> -->
+        <p class="section__title">Питание</p>
+        <div class="food__content">
+          <ion-button [routerLink]="[ '../../add-food']" class="add_button"></ion-button>
+          <div class="food__block" lines="none" *ngFor="let item of food; let i = index">
+            <div [routerLink]="['../../show-food/', item.id]" class="food_img" [ngStyle]="imgurl[i]">
+              <p class="food_text">
+                {{item.title}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-nav>

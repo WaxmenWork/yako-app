@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Добавить</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container__">
+    <form #myForm="ngForm">
+      <div class="new_food">
+        <p class="section__title">Ваше блюдо</p>
+        <div class="new_food__inputs">
+          <ion-input class="input_name" placeholder="Название" name="title" ngModel></ion-input>
+          <ion-input class="input_name" placeholder="Калорийность" name="calories" ngModel></ion-input>
+          <div class="add_photo_block">
+            <p class="inactive_text">Фото</p>
+            <ion-button class="add_photo"><input type="file" class="imginp" (change)="loadFiles($event)"></ion-button>
+          </div>
+          <ion-select interface="popover" placeholder="Категория" name="category_id" ngModel>
+            <ion-select-option value="Завтрак">Завтрак</ion-select-option>
+            <ion-select-option value="Обед">Обед</ion-select-option>
+            <ion-select-option value="Ужин">Ужин</ion-select-option>
+          </ion-select>
+        </div>
+      </div>
+      <div class="ingridients">
+        <p class="section__title">Ингридиенты</p>
+        <div class="ingridiends__inputs" *ngFor="let item of items; let i = index">
+          <div class="first_inputs">
+            <ion-input class="ingridient_input" placeholder="Ингридиент {{i + 1}}" name="ingridient_{{i}}" ngModel></ion-input>
+          </div>
+          <div class="second_inputs">
+            <div class="real_inputs">
+              <ion-input class="small_input" placeholder="Жир." name="fats_{{i}}" ngModel></ion-input>
+              <ion-input class="small_input" placeholder="Бел." name="proteins_{{i}}" ngModel></ion-input>
+              <ion-input class="small_input" placeholder="Угл." name="carbohydrates_{{i}}" ngModel></ion-input>
+            </div>
+            <p class="inactive_text">(на 100г)</p>
+          </div>
+        </div>
+        <ion-button (click)="addItem()" class="add_ingridient"></ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-button (click)="submit(myForm)">✓</ion-button>
+</ion-footer>

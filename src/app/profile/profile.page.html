@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="text">Профиль</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/friends"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main">
+    <p class="section__title">{{userdata.username}}</p>
+    <div class="profileicon" [ngStyle]="imgurl">
+      <div class="img"></div>
+    </div>
+    <div class="buttonprofile">
+      <div class="infotop">
+        <div class="dd"><p>Рост</p><p>{{userdata.height}}</p></div>
+        <div class="dd"><p>Вес</p><p>{{userdata.weight}}</p></div>
+      </div>
+      <div class="infobot">
+        <div class="d1"><p>Дата рождения</p><p>{{userdata.date}}</p></div>
+      </div>
+      <ion-button color="danger" (click)="deleteFriend()">Удалить из друзей</ion-button>
+    </div>
+  </div>
+</ion-content>
