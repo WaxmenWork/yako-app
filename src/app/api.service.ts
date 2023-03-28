@@ -18,63 +18,63 @@ export class ApiService {
     }
 
     addUser(data) {
-        return this.http.post('http://178.49.124.232/create.php', data);
+        return this.http.post('http://localhost/create.php', data);
     }
     getUsers() {
-        return this.http.get('http://178.49.124.232/getUsers.php');
+        return this.http.get('http://localhost/getUsers.php');
     }
     getFood(id, date) {
-        return this.http.get('http://178.49.124.232/getFood.php?id='+id+'&date='+date);
+        return this.http.get('http://localhost/getFood.php?id='+id+'&date='+date);
     }
     getFoodItem(id) {
-        return this.http.get('http://178.49.124.232/getFoodItem.php?id='+id);
+        return this.http.get('http://localhost/getFoodItem.php?id='+id);
     }
     deleteFoodItem(id, date) {
-        return this.http.delete('http://178.49.124.232/deleteFood.php?id='+id+'&date='+date);
+        return this.http.delete('http://localhost/deleteFood.php?id='+id+'&date='+date);
     }
     getFoodIngridients(food_id) {
-        return this.http.get('http://178.49.124.232/getFoodIngridients.php?food_id='+food_id);
+        return this.http.get('http://localhost/getFoodIngridients.php?food_id='+food_id);
     }
     getDiet(){
-        return this.http.get('http://178.49.124.232/getDiet.php');
+        return this.http.get('http://localhost/getDiet.php');
     }
     getOwnDiet(category_id){
-        return this.http.get('http://178.49.124.232/getOwnDiet.php?category_id='+category_id);
+        return this.http.get('http://localhost/getOwnDiet.php?category_id='+category_id);
     }
     getDietItem(id) {
-        return this.http.get('http://178.49.124.232/getDietItem.php?id='+id);
+        return this.http.get('http://localhost/getDietItem.php?id='+id);
     }
     getDietFood(diet_id) {
-        return this.http.get('http://178.49.124.232/getDietFood.php?diet_id='+diet_id);
+        return this.http.get('http://localhost/getDietFood.php?diet_id='+diet_id);
     }
     getDietFoodConf(user_id, diet_id, food_id, date){
-        return this.http.get('http://178.49.124.232/getDietFoodConf.php?user_id='+user_id+'&diet_id='+diet_id+'&food_id='+food_id+'&date='+date);
+        return this.http.get('http://localhost/getDietFoodConf.php?user_id='+user_id+'&diet_id='+diet_id+'&food_id='+food_id+'&date='+date);
     }
     sendDietFoodConf(data){
-        return this.http.post('http://178.49.124.232/sendDietFoodConf.php', data);
+        return this.http.post('http://localhost/sendDietFoodConf.php', data);
     }
     getUserFoodStat(user_id, date){
-        return this.http.get('http://178.49.124.232/getUserFoodStat.php?user_id='+user_id+'&date='+date);
+        return this.http.get('http://localhost/getUserFoodStat.php?user_id='+user_id+'&date='+date);
     }
     getUserFoodIngridientsStat(food_id){
-        return this.http.get('http://178.49.124.232/getUserFoodIngridientsStat.php?food_id='+food_id);
+        return this.http.get('http://localhost/getUserFoodIngridientsStat.php?food_id='+food_id);
     }
     getTrainings(){
-        return this.http.get('http://178.49.124.232/getTrainings.php');
+        return this.http.get('http://localhost/getTrainings.php');
     }
     getOwnTraining(category_id){
-        return this.http.get('http://178.49.124.232/getOwnTrainings.php?category_id='+category_id);
+        return this.http.get('http://localhost/getOwnTrainings.php?category_id='+category_id);
     }
     getTrainingItem(id) {
-        return this.http.get('http://178.49.124.232/getTrainingItem.php?id='+id);
+        return this.http.get('http://localhost/getTrainingItem.php?id='+id);
     }
     getTrainingGyms(training_id) {
-        return this.http.get('http://178.49.124.232/getTrainingGyms.php?training_id='+training_id);
+        return this.http.get('http://localhost/getTrainingGyms.php?training_id='+training_id);
     }
     login(data) {
-        return this.http.post('http://178.49.124.232/login.php', data, {reportProgress: true, responseType: 'json'});
+        return this.http.post('http://localhost/login.php', data, {reportProgress: true, responseType: 'json'});
     }
     getUser(id) {
-        return this.http.get('http://178.49.124.232/getUser.php?id='+id);
+        return this.http.get('http://localhost/getUser.php?id='+id);
     }
 }
